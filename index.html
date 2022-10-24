@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="output-form">
+      <div class="card">
+        <div class="top-card">
+          <div class="card-logo">
+            <img src="./images/card-logo.svg" alt="card-logo">
+          </div>
+          <div class="card-number">
+            <input id="cardNumberOutput" type="text" placeholder="0000 0000 0000 0000" disabled>
+          </div>
+          <div class="card-name-expdate">
+            <div class="card-holder-name">
+              <input id="cardHolderNameOutput" type="text" placeholder="JANE APPLESEED" disabled>
+            </div>
+            <div class="card-exp-date">
+              <span><input id="cardExpDateMmOutput" type="text" placeholder="00" disabled></span>
+              /
+              <span><input id="cardExpDateYyOutput" type="text" placeholder="00" disabled></span>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-card">
+          <div class="card-cvc">
+            <input id="cardCvcOutput" type="text" placeholder="000" disabled>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="input-form">
+      <div>
+        <label class="label-card-name" for="cardHolderNameInput" onfocus="this.className='focus'">CARDHOLDER NAME</label><br>
+        <input id="cardHolderNameInput" class="text" type="text" placeholder="e.g. Jane Appleseed" maxlength="20">
+      </div>
+      <div>
+        <label class="label-card-number" for="cardNumberInput">CARD NUMBER</label><br>
+        <input id="cardNumberInput" class="text" type="text" placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
+        <p id="wrongFormat">Wrong format, numbers only</p>
+      </div>
+      <div class="exp-date-cvc">
+        <div class="date-mm-yy">
+          <div class="firs-el">
+            <div class="label-my-input">
+              <label class="label-exp-date" for="inputDateCvc">EXP. DATE (MM/YY)</label><br>
+            </div>
+            <div class="date">
+              <div class="second-el">
+                <div id="inputDateCvc">
+                  <input id="dateMmInput" class="text" type="text" placeholder="MM" maxlength="2">
+                </div>
+                <div>
+                  <input id="dateYyInput" class="text" type="text" placeholder="YY" maxlength="2">
+                </div>
+
+              </div>
+              <div>
+                <p class="error-text-mmyy">Can't be blank</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="cvc-input">
+          <label class="label-cvc" for="">CVC</label>
+          <div>
+            <input id="cvcInput" class="text" type="text" placeholder="e.g. 123" maxlength="3">
+            <p class="error-text-cvc">Can't be blank</p>
+          </div>
+        </div>
+
+      </div>
+      <div>
+        <input id="confirmButton" type="submit" value="Confirm">
+      </div>
+    </div>
+
+    <div class="completed-form">
+      <div class="completed-logo">
+
+      </div>
+      <div class="completed-title">
+        <h1>
+          THANK YOU!
+        </h1>
+      </div>
+      <div class="completed-subtitle">
+        <h3>We've added your card details</h3>
+      </div>
+
+      <div class="continued-button">
+        <input id="continueButton" type="submit" value="Continue">
+      </div>
+    </div>
+  </div>
+  <hr>
+  <footer>
+    <div class="attribution">
+      Challenge by &nbsp <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor.</a>
+      &nbsp Coded by &nbsp<a href="#">Farrukh Sharifzod.</a>
+    </div>
+  </footer>
+
+
+  <script src="./scripts/script.js"></script>
+</body>
+
+</html>

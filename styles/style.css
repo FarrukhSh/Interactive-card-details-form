@@ -1,0 +1,432 @@
+* {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    height: 97vh;
+    justify-content: center;
+    background-image: url(../images/bg-main-desktop.png);
+    background-size: 500px 1010px;
+    background-repeat: no-repeat;
+
+}
+
+.output-form {
+    display: flex;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 170px;
+    left: 150px;
+}
+
+.top-card {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/bg-card-front.png);
+    background-repeat: no-repeat;
+    height: 245px;
+    width: 447px;
+}
+
+.card-name-expdate {
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-around;
+}
+
+#cardNumberOutput {
+    margin-top: 15px;
+    background: none;
+    width: 100%;
+    border: none;
+    text-align: center;
+    font-size: 33px;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+#cardExpDateMmOutput {
+    background: none;
+    border: none;
+    margin-right: -5px;
+    font-size: 22px;
+    width: 30px;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+
+}
+
+#cardExpDateYyOutput {
+    background: none;
+    border: none;
+    font-size: 22px;
+    width: 30px;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    margin-left: -5px;
+}
+
+#cardHolderNameOutput {
+    background: none;
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    /* text-transform: uppercase; */
+}
+
+#cardCvcOutput {
+    background: none;
+    width: 100%;
+    border: none;
+    font-size: 22px;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+}
+
+.card-logo {
+    display: flex;
+    margin: 30px 30px;
+}
+
+.card-number {
+    margin: 0 30px;
+}
+
+.card-exp-date {
+    color: white;
+    font-size: 22px;
+
+}
+
+.bottom-card {
+    background-image: url(../images/bg-card-back.png);
+    background-repeat: no-repeat;
+    position: relative;
+    top: 50px;
+    left: 120px;
+    height: 245px;
+    width: 447px;
+}
+
+.card-cvc {
+    display: flex;
+    position: absolute;
+    top: 107px;
+    left: 347px;
+}
+
+.label-my-input {
+    display: flex;
+}
+
+#dateMmInput {
+    border-radius: 7px;
+    border: 2px solid #DDDDDD;
+    margin-top: 20px;
+    margin-bottom: -15px;
+    width: 68%;
+    height: 40px;
+    padding-left: 15px;
+    cursor: pointer;
+}
+#dateMmInput:focus {
+    border-image: linear-gradient(to left, hsl(249, 99%, 64%), hsl(278, 94%, 30%) ) 2;
+
+}
+#dateYyInput {
+    border-radius: 7px;
+    border: 2px solid #DDDDDD;
+    width: 68%;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: -15px;
+    padding-left: 15px;
+    cursor: pointer;
+}
+#dateYyInput:focus {
+    border-image: linear-gradient(to left, hsl(249, 99%, 64%), hsl(278, 94%, 30%) ) 2;
+
+}
+.date-mm-yy {
+    display: flex;
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+}
+
+.error-text-cvc {
+    margin-top: 16px;
+    display: none;
+    color: hsl(0, 100%, 66%);
+    font-size: 15px;
+}
+
+.error-text-mmyy {
+    margin-top: 16px;
+    display: none;
+    color: hsl(0, 100%, 66%);
+    font-size: 15px;
+}
+
+#wrongFormat {
+    margin-top: 5px;
+    display: none;
+    color: hsl(0, 100%, 66%);
+    font-size: 15px;
+}
+
+.cvc-input {
+    width: 200px;
+}
+
+#cardNumberInput {
+    padding-left: 15px;
+    border-radius: 7px;
+    border: 2px solid #DDDDDD;
+    height: 40px;
+    width: 96.5%;
+    cursor: pointer;
+}
+#cardNumberInput:focus {
+    border-image: linear-gradient(to left, hsl(249, 99%, 64%), hsl(278, 94%, 30%) ) 2;
+
+}
+.label-card-name {
+    display: flex;
+    margin-bottom: -15px;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.label-card-number {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: -15px;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.label-exp-date {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: -15px;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.label-cvc {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: -15px;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.exp-date-cvc {
+    display: flex;
+    width: 100%;
+
+}
+
+#cardHolderNameInput {
+    cursor: pointer;
+    border: 2px solid #DDDDDD;
+    border-radius: 7px;
+    height: 40px;
+    width: 96.5%;
+    padding-left: 15px;
+}
+input {
+    outline: none;
+
+}
+#cardHolderNameInput:focus {
+    border-image: linear-gradient(to left, hsl(249, 99%, 64%), hsl(278, 94%, 30%) ) 2;
+
+}
+
+#cvcInput {
+    cursor: pointer;
+    border-radius: 7px;
+    border: 2px solid #DDDDDD;
+    width: 186px;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: -15px;
+    padding-left: 15px;
+
+}
+#cvcInput:focus {
+    border-image: linear-gradient(to left, hsl(249, 99%, 64%), hsl(278, 94%, 30%) ) 2;
+
+}
+#confirmButton {
+    margin-top: 70px;
+    height: 55px;
+    width: 402px;
+    border-radius: 7px;
+    background-color: #220930;
+    color: white;
+    cursor: pointer;
+}
+
+#confirmButton:active {
+    box-shadow: 1px 1px 1px 1px rgba(28, 9, 39, 0.333);
+    color: rgba(255, 255, 255, 0.537);
+
+}
+
+.firs-el {
+    display: flex;
+    flex-direction: column;
+}
+
+.second-el {
+    display: flex;
+    flex-direction: row;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 270px;
+    left: 850px;
+}
+
+.completed-form {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 270px;
+    left: 850px;
+}
+
+.completed-logo {
+    width: 90px;
+    height: 90px;
+    background-image: url(../images/icon-complete.svg);
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+}
+
+.completed-title h1 {
+    letter-spacing: 5px;
+    display: flex;
+    color: #1F0D2D;
+    font-size: 30px;
+    margin-bottom: 30px;
+
+}
+
+.completed-subtitle {
+    color: #99999B;
+    padding-bottom: 50px;
+    letter-spacing: 2px;
+
+}
+
+.continued-button input {
+    margin-top: 10px;
+    height: 55px;
+    width: 402px;
+    border-radius: 7px;
+    background-color: #220930;
+    color: white;
+    cursor: pointer;
+}
+
+.attribution {
+    border-bottom: 2px solid grey;
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    width: 100%;
+}
+
+@media screen and (max-width: 1227px) {
+    .container {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 97vh;
+        align-items: center;
+        justify-content: center;
+        background-image: url(../images/bg-main-mobile.png);
+        background-size: 100% 380px;
+        background-repeat: no-repeat;
+    }
+
+    body {
+        overflow-x: hidden;
+
+    }
+
+    .input-form {
+        display: flex;
+        top: 500px;
+        left: 90px;
+    }
+
+    .completed-form {
+        display: none;
+        position: absolute;
+        top: 500px;
+        left: 90px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 30px;
+    }
+
+    .bottom-card {
+        background-image: url(../images/bg-card-back.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 1px;
+        left: 75px;
+        height: 245px;
+        width: 447px;
+    }
+
+    .top-card {
+        display: flex;
+        flex-direction: column;
+        background-image: url(../images/bg-card-front.png);
+        background-repeat: no-repeat;
+        height: 245px;
+        width: 447px;
+        position: absolute;
+        top: 140px;
+        left: -20px;
+        z-index: 9999;
+    }
+
+    hr {
+        margin-top: 200px;
+
+    }
+}
